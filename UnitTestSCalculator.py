@@ -79,3 +79,7 @@ class Unit_Test(unittest.TestCase):
 
                 new_line = file.readline()
         return results_list
+
+
+if __name__ == '__main__':
+    unittest.main()
