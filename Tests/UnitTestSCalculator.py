@@ -5,42 +5,42 @@ import math
 
 class Unit_Test(unittest.TestCase):
     def test_add(self):
-        test_cases = Unit_Test.get_test_cases_from_file("UnitTestAddition.csv")
+        test_cases = Unit_Test.get_test_cases_from_file("CSVFiles/UnitTestAddition.csv")
 
         for test in test_cases:
             print("Running addition test case: {}".format(test))
             self.assertEqual(test[2], Calculator.addition([test[0], test[1]]))
 
     def test_subtraction(self):
-        test_cases = Unit_Test.get_test_cases_from_file("UnitTestSubtraction.csv")
+        test_cases = Unit_Test.get_test_cases_from_file("CSVFiles/UnitTestSubtraction.csv")
 
         for test in test_cases:
             print("Running subtraction test case: {}".format(test))
             self.assertEqual(test[2], Calculator.subtraction(test[1], test[0]))
 
     def test_division(self):
-        test_cases = Unit_Test.get_test_cases_from_file("UnitTestDivision.csv")
+        test_cases = Unit_Test.get_test_cases_from_file("CSVFiles/UnitTestDivision.csv")
 
         for test in test_cases:
             print("Running division test case: {}".format(test))
             self.assertTrue(math.fabs(test[2] - Calculator.division(test[1], test[0])) <= 0.001)
 
     def test_multiplication(self):
-        test_cases = Unit_Test.get_test_cases_from_file("UnitTestMultiplication.csv")
+        test_cases = Unit_Test.get_test_cases_from_file("CSVFiles/UnitTestMultiplication.csv")
 
         for test in test_cases:
             print("Running multiplication test case: {}".format(test))
             self.assertEqual(test[2], Calculator.multiplication([test[1], test[0]]))
 
     def test_square(self):
-        test_cases = Unit_Test.get_test_cases_from_file("UnitTestSquare.csv")
+        test_cases = Unit_Test.get_test_cases_from_file("CSVFiles/UnitTestSquare.csv")
 
         for test in test_cases:
             print("Running square test case: {}".format(test))
             self.assertEqual(test[1], Calculator.square(test[0]))
 
     def test_square_root(self):
-        test_cases = Unit_Test.get_test_cases_from_file("UnitTestSquareRoot.csv")
+        test_cases = Unit_Test.get_test_cases_from_file("CSVFiles/UnitTestSquareRoot.csv")
 
         for test in test_cases:
             print("Running square root test case: {}".format(test))
