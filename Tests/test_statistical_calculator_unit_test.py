@@ -1,16 +1,16 @@
-import UnitTestSCalculator
 from statistical_calculator import Statistical_Calculator
 import unittest
 import  math
+from CSVReader import CSV_Reader_For_Calculator
 
-class Statistical_Calculator_Test(UnitTestSCalculator.Unit_Test):
+class Statistical_Calculator_Test(unittest.TestCase):
 
     @staticmethod
     def is_almost_equal(num1, num2):
         return math.fabs(float(num1) - float(num2)) < 0.001
 
     def test_mean(self):
-        test_cases= UnitTestSCalculator.Unit_Test.get_test_cases_from_file("Tests/CSVFiles/UnitTestMean.csv")
+        test_cases= CSV_Reader_For_Calculator.get_numbers_from_file("Tests/CSVFiles/UnitTestMean.csv")
         for test_case in test_cases:
             test_case_values = test_case[:-1]
             test_case_result = test_case[-1]
@@ -25,7 +25,7 @@ class Statistical_Calculator_Test(UnitTestSCalculator.Unit_Test):
         self.assertRaises(TypeError, Statistical_Calculator.mean, test_case)
 
     def test_zscore(self):
-        test_cases = UnitTestSCalculator.Unit_Test.get_test_cases_from_file("Tests/CSVFiles/UnitTestZScore.csv")
+        test_cases = CSV_Reader_For_Calculator.get_numbers_from_file("Tests/CSVFiles/UnitTestZScore.csv")
         for test_case in test_cases:
             start_of_expected_results_index = int(len(test_case)/2)
             test_values = test_case[:start_of_expected_results_index]
@@ -47,7 +47,7 @@ class Statistical_Calculator_Test(UnitTestSCalculator.Unit_Test):
         self.assertRaises(TypeError, Statistical_Calculator.z_scores, test_case)
 
     def test_pop_corr_coeff(self):
-        test_cases = UnitTestSCalculator.Unit_Test.get_test_cases_from_file("Tests/CSVFiles/UnitTestPopulationCorrelationCoefficient.csv")
+        test_cases = CSV_Reader_For_Calculator.get_numbers_from_file("Tests/CSVFiles/UnitTestPopulationCorrelationCoefficient.csv")
         for test_case in test_cases:
             second_sequence_start_index = int((len(test_case)-1) / 2)
             first_sequence = test_case[:second_sequence_start_index]
@@ -74,7 +74,7 @@ class Statistical_Calculator_Test(UnitTestSCalculator.Unit_Test):
                           second_sequence)
 
     def test_population_variance(self):
-        test_cases = UnitTestSCalculator.Unit_Test.get_test_cases_from_file("Tests/CSVFiles/UnitTestPopulationVariance.csv")
+        test_cases = CSV_Reader_For_Calculator.get_numbers_from_file("Tests/CSVFiles/UnitTestPopulationVariance.csv")
         for test_case in test_cases:
             test_case_values = test_case[:-1]
             test_case_result = test_case[-1]
@@ -89,7 +89,7 @@ class Statistical_Calculator_Test(UnitTestSCalculator.Unit_Test):
         self.assertRaises(TypeError, Statistical_Calculator.population_variance, test_case)
 
     def test_sample_variance(self):
-        test_cases = UnitTestSCalculator.Unit_Test.get_test_cases_from_file("Tests/CSVFiles/UnitTestSampleVariance.csv")
+        test_cases = CSV_Reader_For_Calculator.get_numbers_from_file("Tests/CSVFiles/UnitTestSampleVariance.csv")
         for test_case in test_cases:
             test_case_values = test_case[:-1]
             test_case_result = test_case[-1]
