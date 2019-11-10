@@ -1,4 +1,4 @@
-Mini Project: II
+**MINI PROJECT II**
 
 Project Partners
 -Prajakta Pendse(pp765@njit.edu)
@@ -7,12 +7,12 @@ Project Partners
 
 We have divided tasks among three.Below is the individual contribution for this project
 
-**PRAJAKTA PENDSE**
+**PRAJAKTA PENDSE**(Branch name -Prajakta ,URL: https://github.com/prajaktavpendse/Statistical_calculator/tree/Prajakta)
 
 Mini Project II 
- -Population Mean                             |
- -Z-score                                     |
- -Population correlation coefficient          |
+ -Population Mean                             
+ -Z-score                                     
+ -Population correlation coefficient          
  -Population Variance
  -Variance of sample proportion
  
