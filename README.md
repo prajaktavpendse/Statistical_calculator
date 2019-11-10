@@ -17,4 +17,4 @@ latest_scalculator.py is inherited by statistical calculator.
 
 Unit test code is under Test folder.I have added separate module for CSVReader,calculator and statistical calculator.
 
-All test cases are successful .You can check this in travis-ci(I added the link for travis-ci in the beginning of readme file).
+All test cases are successful .You can check this in travis-ci(I added the link for travis-ci in the beginning of readme file)...
