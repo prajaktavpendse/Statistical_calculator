@@ -1,3 +1,5 @@
+#Author: Prajakta V Pendse
+
 from statistical_calculator import Statistical_Calculator
 import unittest
 import  math
